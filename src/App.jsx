@@ -1,18 +1,20 @@
 import { useMemo, useRef, useState } from 'react'
 import './App.css'
 
+const asset = (name) => `${import.meta.env.BASE_URL}assets/${name}`
+
 const ASSETS = {
-  logo: '/assets/169d886ca50f85b0c9cc1db9191d652cdcdb242b.svg',
-  panel: '/assets/7022154c7c5a73e6d8ee125bfc408e00035804bb.png',
-  arrow: '/assets/bf1ff3106d75e183423fe88c22218bd93f392205.svg',
-  arrowRight: '/assets/6973451d9b58121be8688cc972cfe9bffb9eaf95.svg',
-  first: '/assets/d60f8f2579fb009f90fd4c90719d546da14b00c3.svg',
-  prev: '/assets/7a23fbf1e5e1ce9d11446e613275859f1d789c4f.svg',
-  next: '/assets/3dc1e05bf9cc008d0652dd3d51484ab502196b18.svg',
-  last: '/assets/5dd024dd8fe410f2864c22acd5ab257f308f6b05.svg',
-  info: '/assets/18687cf15f0ba4a884f2137bde1a2c9f19f58ada.svg',
-  navPrev: '/assets/42ec325ef49d74229286be1c394de5624ccc1c93.svg',
-  navNext: '/assets/83af8f306064580a3922bca62ac57bf6b4c98583.svg',
+  logo: asset('169d886ca50f85b0c9cc1db9191d652cdcdb242b.svg'),
+  panel: asset('7022154c7c5a73e6d8ee125bfc408e00035804bb.png'),
+  arrow: asset('bf1ff3106d75e183423fe88c22218bd93f392205.svg'),
+  arrowRight: asset('6973451d9b58121be8688cc972cfe9bffb9eaf95.svg'),
+  first: asset('d60f8f2579fb009f90fd4c90719d546da14b00c3.svg'),
+  prev: asset('7a23fbf1e5e1ce9d11446e613275859f1d789c4f.svg'),
+  next: asset('3dc1e05bf9cc008d0652dd3d51484ab502196b18.svg'),
+  last: asset('5dd024dd8fe410f2864c22acd5ab257f308f6b05.svg'),
+  info: asset('18687cf15f0ba4a884f2137bde1a2c9f19f58ada.svg'),
+  navPrev: asset('42ec325ef49d74229286be1c394de5624ccc1c93.svg'),
+  navNext: asset('83af8f306064580a3922bca62ac57bf6b4c98583.svg'),
 }
 
 const initialCards = [
